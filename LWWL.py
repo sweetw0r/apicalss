@@ -16,4 +16,3 @@ b.append('Serhii')
 print b
 
 pass
-pass
