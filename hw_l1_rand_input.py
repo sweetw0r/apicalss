@@ -15,7 +15,6 @@ while True:
             break
         else:
             print 'The number is out of range. Pleas try again...'
-    break
 
 y = []
 for index, value in enumerate(i):
