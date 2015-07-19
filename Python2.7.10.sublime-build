@@ -1,0 +1,10 @@
+{
+	"path": "/Library/Frameworks/Python.framework/Versions/2.7/bin",
+	"env": {
+            "PYTHONPATH": "/Python/apicalss/"
+        },
+	"cmd": ["python2.7", "$file"],
+	"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+	"selector": "source.python",	
+}
+
