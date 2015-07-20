@@ -1,10 +1,10 @@
-#str = 'I love milk'
-#x = str.split(' ')
-#y = []
-#for i in reversed(x):
-#y.append(i)
-#new = ' '.join(y)
-#print new
+# str = 'I love milk'
+# x = str.split(' ')
+# y = []
+# for i in reversed(x):
+#     y.append(i)
+# new = ' '.join(y)
+# print new
 
 # str = 'I love milk'
 # x = ' '.join(reversed(str.split()))
@@ -12,14 +12,12 @@
 
 # str = 'I love milk'
 # y = str.split()
-# for v in range(len(y)-1):
-# 	y.insert(0, y[v])
-# print y
-
-# !!!!!!!!! I love milk
+# x = []
+# for v in range(len(y)):
+#     x.insert(0, y[v])
+# print ' '.join(x)
 
 # l = [4, 8, 0, 5, 12, 20]
-
 # min = l[0]
 # max = l[0]
 
@@ -32,7 +30,6 @@
 # print("Min is %s") % (min)
 # print('Max is %s') % (max)
 # print('Sum is %s') % (max + min)
-
 
 
 # import random
@@ -64,19 +61,19 @@
 # 	res = 1
 # 	for i in range(2, x+1):
 # 		res *= i
-# 	return res 
+# 	return res
 # z = fact(7)
 # print z
 
-def arifpr(start, end, step):
-	l = []
-	temp = start
-	for i in range(end):
-		l.append(temp)
-		temp += step
-	return l
+# def arifpr(start, end, step):
+# 	l = []
+# 	temp = start
+# 	for i in range(end):
+# 		l.append(temp)
+# 		temp += step
+# 	return l
 
-print arifpr(0, 20, 4)
+# print arifpr(0, 20, 4)
 
 
 # def x(l, jump):
