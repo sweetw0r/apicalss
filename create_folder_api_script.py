@@ -15,7 +15,7 @@ def create_folder(name, domain=None, username=None, password=None,
     if accept is None:
         accept = 'application/json'
     if method is None:
-        method = "POST"
+        method = 'POST'
     if test_path is None:
         test_path = '/Shared/smoke_test/'
 

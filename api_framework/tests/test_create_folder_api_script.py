@@ -1,6 +1,7 @@
 from api_utils import Calls
 from unittest import TestCase
 import httplib
+from api_utils import Config
 
 
 class TestClass(TestCase):
@@ -33,3 +34,12 @@ class TestClass(TestCase):
             0]['code'] == 'INVALID_CREDENTIALS'
         assert resp.json['inputErrors']['credentials'][0]['msg'] == 'This request is unauthenticated. Please provide ' \
                                                                     'credentials and try again.'
+    
+    def test_perm(self):
+        folder = self.calls.gen_random_name()
+        resp = self.calls.create_folder(folder)
+        assert resp.http_code == httplib.OK
+        resp = self.calls.test_user_permision(name, user=self.config.puser, test_path='%s') % (folder)
+        assert resp.http_code == httplib.CREATED
+
+
