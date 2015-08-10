@@ -65,15 +65,15 @@
 # z = fact(7)
 # print z
 
-# def arifpr(start, end, step):
-# 	l = []
-# 	temp = start
-# 	for i in range(end):
-# 		l.append(temp)
-# 		temp += step
-# 	return l
+def arifpr(start, end, step):
+	l = []
+	temp = start
+	for i in range(end):
+		l.append(temp)
+		temp += step
+	return l
 
-# print arifpr(0, 20, 4)
+print arifpr(0, 20, 4)
 
 
 # def x(l, jump):
