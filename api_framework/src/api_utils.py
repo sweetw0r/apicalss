@@ -49,7 +49,7 @@ class Calls:
         self.config = Config()
         self.no_json = 'noJson'
 
-    def create_folder(self, name, domain=None,
+    def create_folder(self, folder_name, domain=None,
                       username=None, password=None,
                       content_type=None,
                       accept=None, method=None, test_path=None):
@@ -69,7 +69,7 @@ class Calls:
             test_path = self.config.test_path
 
         endpoint = '/public-api/v1/fs/'
-        url = domain + endpoint + test_path + name
+        url = domain + endpoint + test_path + folder_name
         headers = dict()
         headers['Content-Type'] = content_type
         headers['Accept'] = accept
@@ -102,7 +102,7 @@ class Calls:
     def gen_random_name():
         return 'dynamic_name_%s' % str(time.time()).replace('.', '')
 
-    def delete_folder(self, name, domain=None,
+    def delete_folder(self, folder_name, domain=None,
                       username=None, password=None,
                       content_type=None,
                       accept=None, method=None, test_path=None):
@@ -122,7 +122,7 @@ class Calls:
             test_path = self.config.test_path
 
         endpoint = '/public-api/v1/fs/'
-        url = domain + endpoint + test_path + name
+        url = domain + endpoint + test_path + folder_name
         headers = dict()
         headers['Content-Type'] = content_type
         headers['Accept'] = accept
@@ -149,61 +149,62 @@ class Calls:
         return response
 
 
-    def test_user_permision(self, name, permission=None, puser=None, domain=None,
-                      username=None, password=None,
-                      content_type=None,
-                      accept=None, method=None, test_path=None):
-        if domain is None:
-            domain = self.config.domain
-        if username is None:
-            username = self.config.admin_login
-        if password is None:
-            password = self.config.password
-        if content_type is None:
-            content_type = 'application/json'
-        if accept is None:
-            accept = 'application/json'
-        if method is None:
-            method = 'POST'
-        if test_path is None:
-            test_path = self.config.test_path
-        if puser is None:
-            puser = self.config.puser
-        if permission is None:
-            permission = self.config.permission
+    # def test_user_permision(self, folder_name, permission=None, puser=None,
+    #                         domain=None,
+    #                         username=None, password=None,
+    #                         content_type=None,
+    #                         accept=None, method=None, test_path=None):
+    #     if domain is None:
+    #         domain = self.config.domain
+    #     if username is None:
+    #         username = self.config.admin_login
+    #     if password is None:
+    #         password = self.config.password
+    #     if content_type is None:
+    #         content_type = 'application/json'
+    #     if accept is None:
+    #         accept = 'application/json'
+    #     if method is None:
+    #         method = 'POST'
+    #     if test_path is None:
+    #         test_path = self.config.test_path
+    #     if puser is None:
+    #         puser = self.config.puser
+    #     if permission is None:
+    #         permission = self.config.permission
 
-        endpoint = '/public-api/v1/fs/'
-        url = domain + endpoint + test_path + name
-        headers = dict()
-        headers['Content-Type'] = content_type
-        headers['Accept'] = accept
-        permission = dict()
-        permission['users'] = [puser]
-        permission['permission'] = permission
-        permission = json.dumps(permission)
-        r = requests.request(
-            url=url,
-            auth=(username, password),
-            headers=headers,
-            permission=permission,
-            method=method
-        )
-        try:
-            json_resp = json.loads(r.content)
-        except ValueError:
-            if method == 'OPTIONS':
-                json_resp = r.content
-            else:
-                json_resp = self.no_json
+    #     endpoint = '/public-api/v1/fs/'
+    #     url = domain + endpoint + test_path + folder_name
+    #     headers = dict()
+    #     headers['Content-Type'] = content_type
+    #     headers['Accept'] = accept
+    #     permission = dict()
+    #     permission['users'] = [puser]
+    #     permission['permission'] = permission
+    #     permission = json.dumps(permission)
+    #     r = requests.request(
+    #         url=url,
+    #         auth=(username, password),
+    #         headers=headers,
+    #         permission=permission,
+    #         method=method
+    #     )
+    #     try:
+    #         json_resp = json.loads(r.content)
+    #     except ValueError:
+    #         if method == 'OPTIONS':
+    #             json_resp = r.content
+    #         else:
+    #             json_resp = self.no_json
 
-        r.json = json_resp
-        response = Response()
-        response.http_code = r.status_code
-        response.json = r.json
-        response.headers = r.headers
-        return response
+    #     r.json = json_resp
+    #     response = Response()
+    #     response.http_code = r.status_code
+    #     response.json = r.json
+    #     response.headers = r.headers
+    #     return response
 
 
-        @staticmethod
-        def gen_random_name():
-            return 'dynamic_name_%s' % str(time.time()).replace('.', '')
+    #     @staticmethod
+    #     def gen_random_name():
+    #         return 'dynamic_name_%s' % str(time.time()).replace('.', '')

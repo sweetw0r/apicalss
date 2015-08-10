@@ -35,11 +35,11 @@ class TestClass(TestCase):
         assert resp.json['inputErrors']['credentials'][0]['msg'] == 'This request is unauthenticated. Please provide ' \
                                                                     'credentials and try again.'
     
-    def test_perm(self):
-        folder = self.calls.gen_random_name()
-        resp = self.calls.create_folder(folder)
-        assert resp.http_code == httplib.OK
-        resp = self.calls.test_user_permision(name, user=self.config.puser, test_path='%s') % (folder)
-        assert resp.http_code == httplib.CREATED
+    # def test_perm(self):
+    #     folder = self.calls.gen_random_name()
+    #     resp = self.calls.create_folder(folder)
+    #     assert resp.http_code == httplib.OK
+    #     resp = self.calls.test_user_permision(user=self.config.puser, test_path='%s') % (folder)
+    #     assert resp.http_code == httplib.CREATED
 
 
