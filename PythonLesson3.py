@@ -70,12 +70,21 @@
 # print z
 
 def arifpr(start, end, step):
+<<<<<<< HEAD
   l = []
   temp = start
   for i in range(end):
       l.append(temp)
       temp += step
   return l
+=======
+	l = []
+	temp = start
+	for i in range(end):
+		l.append(temp)
+		temp += step
+	return l
+>>>>>>> a90b1bdfaae1561e846bd60895caaba433d00bbf
 
 print arifpr(0, 20, 4)
 
