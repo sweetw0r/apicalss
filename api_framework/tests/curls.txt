@@ -1,0 +1,11 @@
+FOLDER:
+curl 'https://istepanko31.qa-egnyte.com/public-api/v1/fs/Shared/test1/25' -d '{"action": "add_folder"}' -H 'Content-Type: application/json' -u admin:apitest2 -X POST -v
+
+curl 'https://istepanko31.qa-egnyte.com/public-api/v1/perms/folder/Shared/test1/25' -d '{"users": ["power_user"], "permission": "Viewer"}' -H "Content-Type: application/json" -u admin:apitest2 -X POST -v
+
+curl 'https://istepanko31.qa-egnyte.com/public-api/v1/fs/Shared/test1/25' -H "Content-Type: application/json" -u admin:apitest2 -X DELETE -v
+
+FILE:
+mkdir ./test_files
+dd if=/dev/urandom of='./test_files/test_filename_25.txt' bs=200 count=1 2>/dev/null
+curl 'https://istepanko31.qa-egnyte.com/public-api/v1/fs-content/Shared/test1/25/test_filename_25.txt' --upload-file './test_files/test_filename_25.txt' -H 'Content-Type: application/json' -u admin:apitest2 -X POST -v
