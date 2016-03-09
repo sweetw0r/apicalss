@@ -1,0 +1,16 @@
+{
+  "env_params": {
+	"app_key": "MALL2014ADMIN",
+	"event_id": 585,
+	"Authorization": "ie4G4uq9Ng85Ee47orXx4L2eYSVCap1kUD08jVtoD+d/gJ/o7tTTlg==",
+	"company_id": 2,
+	"facility_id": 3,
+	"facility_surfer": 203,
+	"start_date": "03/04/2016 12:00 PM",
+	"end_date": "12/30/2016 10:00 PM",
+	"st_date": "08/10/2015",
+	"en_date": "12/30/2015",
+	"ACTUAL_USER_TOKEN": "G1BkLKg9CUmEt8v2yxPR+BtRbCXuzUMU8BgDOodB3fQKB+QPbPoksNZFGmNbDbGCjdFJImrU7nrj4p5VdVqAi/bMZ1c8669pqfvcZr9YQ2s3P0a2AhfBDzaZ/5/vcr9XPs31CjG5IqGSJKldyks153ImdU8Tf3gAVGI426lRRGWW2sdTmxSA4UEc/Jrqt0UZTJj19AO9jQtZLE4k+AHvmioI2G6mXSG94GaeU3/+Vq0XAl40jQIngqCzAwskMqaWFsRJlnP8SCIKnEVJoGjYmPBcjVWeMRTrppQG/hqS6V+myZvdDT5PgZwU/lO0gmcuKdKfyUyiO8SpRcSljgCWhr5DmVJYe6acCO36Ar0QLMGkW/QHN6LwYJH/zZDGWQ4ai9J8C47XHYCwM4ZKvVxysEV5seyBSHdhJbVtZ2/0f8yFXOmBttkIWPD/g9+yaJoS"
+  },
+  "capture_params": ["result", "example_body_param", "example_header_param"]
+}

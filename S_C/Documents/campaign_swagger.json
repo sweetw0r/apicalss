@@ -1,0 +1,746 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Commerce Platform API",
+		"description": "Commerce platform - A wells Fargo Innovation, research & Development group initiative.",
+		"version": "1.0.0-SNAPSHOT",
+		"contact": {
+			"name": "API Support",
+			"url": "http://together.we.ll.go.far.io/support",
+			"email": "sayali.bhos@wellsfargo.com"
+		},
+		"license": {
+			"name": "Copyright Restriction",
+			"url": "http://www.wellsfargo.com/licenses/x.html"
+		}
+	},
+	"host": "wnl-svr016c.wellsfargo.com:8480",
+	"schemes": [
+		"http"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"produces": [
+		"application/json"
+	],
+	"paths": {
+		"/wds-campaign/createCampaign": {
+			"post": {
+				"summary": "Creates a campaign",
+				"description": "Create a campaign for a particular facility",
+				"parameters": [{
+					"name": "createCampaign",
+					"in": "body",
+					"schema": {
+						"$ref": "#/definitions/createCampaign"
+					},
+					"required": true
+				}],
+				"tags": [
+					"CampaignProgram"
+				],
+				"responses": {
+					"200": {
+						"description": "Campaign created successfully",
+						"schema": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"/wds-campaign/getCreatedByNames": {
+			"post": {
+				"summary": "Get a list of users who have created campaigns",
+				"description": "Get a list of users who have created campaigns. The list will be specific to a company or facility based on the input",
+				"parameters": [{
+					"name": "getCreatedByNames",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/getCreatedByNames"
+					}
+				}],
+				"tags": [
+					"CampaignProgram"
+				],
+				"responses": {
+					"200": {
+						"description": "Get a list of users who have created campaigns",
+						"schema": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"/wds-campaign/getCampaigns": {
+			"post": {
+				"summary": "Get Campaigns",
+				"description": "Get Campaigns for a particular facility",
+				"parameters": [{
+					"name": "getCampaigns",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/getCampaigns"
+					}
+				}],
+				"tags": [
+					"CampaignProgram"
+				],
+				"responses": {
+					"200": {
+						"description": "Get Campaigns for a particular facility successful",
+						"schema": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"/wds-campaign/deActivateCampaign": {
+			"post": {
+				"summary": "DeActivate a Campaign",
+				"description": "DeActivate a published Campaign",
+				"parameters": [{
+					"name": "deActivateCampaign",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/deActivateCampaign"
+					}
+				}],
+				"tags": [
+					"CampaignProgram"
+				],
+				"responses": {
+					"200": {
+						"description": "DeActivate a published Campaign successful",
+						"schema": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"/wds-campaign/deleteCampaign": {
+			"post": {
+				"summary": "Delete a Campaign",
+				"description": "Delete a Campaign not in the Active or Published state",
+				"parameters": [{
+					"name": "deleteCampaign",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/deleteCampaign"
+					}
+				}],
+				"tags": [
+					"CampaignProgram"
+				],
+				"responses": {
+					"200": {
+						"description": "Delete a Campaign not in the Active or Published state successful",
+						"schema": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"/wds-campaign/getCampaignByCampaignId": {
+			"post": {
+				"summary": "Get a Campaign By Campaign Id",
+				"description": "Get a Campaign By Campaign Id",
+				"parameters": [{
+					"name": "getCampaignByCampaignId",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/getCampaignByCampaignId"
+					}
+				}],
+				"tags": [
+					"CampaignProgram"
+				],
+				"responses": {
+					"200": {
+						"description": "Get a Campaign By Campaign Id Successful",
+						"schema": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"/wds-campaign/publishedCampaign": {
+			"post": {
+				"summary": "Publish a Campaign",
+				"description": "Publish a Campaign",
+				"parameters": [{
+					"name": "publishedCampaign",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/publishedCampaign"
+					}
+				}],
+				"tags": [
+					"CampaignProgram"
+				],
+				"responses": {
+					"200": {
+						"description": "Publish a Campaign Successful",
+						"schema": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"/wds-campaign/activateCampaign": {
+			"post": {
+				"summary": "Activate a Campaign",
+				"description": "Activate a Campaign",
+				"parameters": [{
+					"name": "activateCampaign",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/activateCampaign"
+					}
+				}],
+				"tags": [
+					"CampaignProgram"
+				],
+				"responses": {
+					"200": {
+						"description": "Activate a Campaign Successful",
+						"schema": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"/wds-campaign/updateCampaign": {
+			"post": {
+				"summary": "Update a Campaign",
+				"description": "Update a campaign for a particular facility",
+				"parameters": [{
+					"name": "updateCampaign",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/updateCampaign"
+					}
+				}],
+				"tags": [
+					"CampaignProgram"
+				],
+				"responses": {
+					"200": {
+						"description": "Update Campaign Successful",
+						"schema": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"/wds-campaign/getCampaignType": {
+			"post": {
+				"summary": "Get the list of Campaign Types",
+				"description": "Get the list of Campaign Types",
+				"parameters": [{
+					"name": "getCampaignType",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/getCampaignType"
+					}
+				}],
+				"tags": [
+					"CampaignProgram"
+				],
+				"responses": {
+					"200": {
+						"description": "Getting list of Campaign Types Successful",
+						"schema": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"getCreatedByNames": {
+			"type": "object",
+			"properties": {}
+		},
+		"getCampaigns": {
+			"type": "object",
+			"properties": {
+				"companyId": {
+					"type": "string"
+				},
+				"startDate": {
+					"type": "string"
+				},
+				"endDate": {
+					"type": "string"
+				},
+				"createdOn": {
+					"type": "string"
+				},
+				"createdBy": {
+					"type": "string"
+				},
+				"campaignName": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"companyId",
+				"startDate",
+				"endDate",
+				"createdOn",
+				"createdBy",
+				"campaignName"
+			]
+		},
+		"deActivateCampaign": {
+			"type": "object",
+			"properties": {
+				"campaignId": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"campaignId"
+			]
+		},
+		"deleteCampaign": {
+			"type": "object",
+			"properties": {
+				"campaignId": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"campaignId"
+			]
+		},
+		"getCampaignByCampaignId": {
+			"type": "object",
+			"properties": {
+				"campaignId": {
+					"type": "integer"
+				}
+			},
+			"required": [
+				"campaignId"
+			]
+		},
+		"publishedCampaign": {
+			"type": "object",
+			"properties": {
+				"campaignId": {
+					"type": "integer"
+				}
+			},
+			"required": [
+				"campaignId"
+			]
+		},
+		"activateCampaign": {
+			"type": "object",
+			"properties": {
+				"campaignId": {
+					"type": "integer"
+				}
+			},
+			"required": [
+				"campaignId"
+			]
+		},
+		"createCampaign": {
+			"type": "object",
+			"properties": {
+				"irdapi": {
+					"type": "object",
+					"properties": {
+						"irdapiContext": {
+							"type": "object",
+							"properties": {
+								"messageDateTime": {
+									"type": "string"
+								},
+								"appId": {
+									"type": "string"
+								},
+								"messageId": {
+									"type": "string"
+								},
+								"messageType": {
+									"type": "string"
+								},
+								"companyId": {
+									"type": "string"
+								},
+								"facilityId": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"messageDateTime",
+								"appId",
+								"messageId",
+								"messageType",
+								"companyId",
+								"facilityId"
+							]
+						},
+						"irdapiBody": {
+							"type": "object",
+							"properties": {
+								"contextEngineRq": {
+									"type": "object",
+									"properties": {
+										"campaign": {
+											"type": "object",
+											"properties": {
+												"name": {
+													"type": "string"
+												},
+												"stDate": {
+													"type": "string"
+												},
+												"endDate": {
+													"type": "string"
+												},
+												"targetGroups": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"type": {
+													"type": "string"
+												},
+												"triggerGroups": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"name": {
+																"type": "string"
+															},
+															"triggers": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"locationEvent": {
+																			"type": "array",
+																			"items": {
+																				"type": "object",
+																				"properties": {
+																					"key": {
+																						"type": "string"
+																					},
+																					"value": {
+																						"type": "string"
+																					},
+																					"op": {
+																						"type": "string"
+																					}
+																				}
+																			}
+																		},
+																		"eventName": {
+																			"type": "string"
+																		}
+																	}
+																}
+															},
+															"action": {
+																"type": "object",
+																"properties": {
+																	"type": {
+																		"type": "string"
+																	},
+																	"priority": {
+																		"type": "string"
+																	},
+																	"contentId": {
+																		"type": "string"
+																	},
+																	"actionName": {
+																		"type": "string"
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"required": [
+						"irdapiContext",
+						"irdapiBody"
+					]
+				}
+			},
+			"required": [
+				"irdapi"
+			]
+		},
+		"updateCampaign": {
+			"type": "object",
+			"properties": {
+				"irdapi": {
+					"type": "object",
+					"properties": {
+						"irdapiContext": {
+							"type": "object",
+							"properties": {
+								"messageId": {
+									"type": "string"
+								},
+								"messageDateTime": {
+									"type": "string"
+								},
+								"messageType": {
+									"type": "string"
+								},
+								"appId": {
+									"type": "string"
+								},
+								"companyId": {
+									"type": "string"
+								},
+								"facilityId": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"messageId",
+								"messageDateTime",
+								"messageType",
+								"appId",
+								"companyId",
+								"facilityId"
+							]
+						},
+						"irdapiBody": {
+							"type": "object",
+							"properties": {
+								"contextEngineRq": {
+									"type": "object",
+									"properties": {
+										"campaignAttributes": {
+											"type": "object",
+											"properties": {
+												"campaignId": {
+													"type": "string"
+												},
+												"scheduleId": {
+													"type": "string"
+												}
+											}
+										},
+										"campaign": {
+											"type": "object",
+											"properties": {
+												"name": {
+													"type": "string"
+												},
+												"stDate": {
+													"type": "string"
+												},
+												"endDate": {
+													"type": "string"
+												},
+												"isDiffConfig": {
+													"type": "boolean"
+												},
+												"campaignSchedularFilterReq": {
+													"type": "array",
+													"items": [{
+														"type": "object",
+														"properties": {
+															"day": {
+																"type": "string"
+															},
+															"startTime": {
+																"type": "string"
+															},
+															"endTime": {
+																"type": "string"
+															},
+															"active": {
+																"type": "string"
+															}
+														}
+													}, {
+														"type": "object",
+														"properties": {
+															"day": {
+																"type": "string"
+															},
+															"startTime": {
+																"type": "string"
+															},
+															"endTime": {
+																"type": "string"
+															},
+															"active": {
+																"type": "string"
+															}
+														}
+													}]
+												},
+												"targetGroups": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"triggerGroups": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"name": {
+																"type": "string"
+															},
+															"triggers": {
+																"type": "array",
+																"items": [{
+																	"type": "object",
+																	"properties": {
+																		"locationEvent": {
+																			"type": "array",
+																			"items": [{
+																				"type": "object",
+																				"properties": {
+																					"key": {
+																						"type": "string"
+																					},
+																					"value": {
+																						"type": "string"
+																					},
+																					"op": {
+																						"type": "string"
+																					}
+																				}
+																			}, {
+																				"type": "object",
+																				"properties": {
+																					"key": {
+																						"type": "string"
+																					},
+																					"value": {
+																						"type": "string"
+																					},
+																					"op": {
+																						"type": "string"
+																					}
+																				}
+																			}]
+																		},
+																		"eventName": {
+																			"type": "string"
+																		}
+																	}
+																}, {
+																	"type": "object",
+																	"properties": {
+																		"locationEvent": {
+																			"type": "array",
+																			"items": [{
+																				"type": "object",
+																				"properties": {
+																					"key": {
+																						"type": "string"
+																					},
+																					"value": {
+																						"type": "string"
+																					},
+																					"op": {
+																						"type": "string"
+																					}
+																				}
+																			}, {
+																				"type": "object",
+																				"properties": {
+																					"key": {
+																						"type": "string"
+																					},
+																					"value": {
+																						"type": "string"
+																					},
+																					"op": {
+																						"type": "string"
+																					}
+																				}
+																			}]
+																		},
+																		"eventName": {
+																			"type": "string"
+																		}
+																	}
+																}]
+															},
+															"action": {
+																"type": "object",
+																"properties": {
+																	"type": {
+																		"type": "string"
+																	},
+																	"priority": {
+																		"type": "string"
+																	},
+																	"contentId": {
+																		"type": "string"
+																	},
+																	"actionName": {
+																		"type": "string"
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"required": [
+						"irdapiContext",
+						"irdapiBody"
+					]
+				}
+			},
+			"required": [
+				"irdapi"
+			]
+		},
+		"getCampaignType": {
+			"type": "object",
+			"properties": {}
+		}
+	}
+}

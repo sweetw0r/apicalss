@@ -1,0 +1,17 @@
+ {
+  "irdapi": {
+    "irdapiContext": {
+      "messageId": "1b9292759d91f6901969",
+      "messageDateTime": "2014-08-18T14:07:46+0530",
+      "messageType": "reservation",
+      "appId": "MAL4ADM",
+      "authCode": "a02b149751ae84e5f6bfd5a9d94a2dbe21a566147149a4913e2ea7bfa16e628d"
+       
+    },
+    "irdapiBody": {
+      "reservationRq": {
+        "CompanyID": 1
+      }
+    }
+  }
+}

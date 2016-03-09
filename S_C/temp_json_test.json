@@ -1,0 +1,137 @@
+"{
+    ""irdapi"": {
+        ""irdapiContext"": {
+            
+           
+""messageDateTime"":""2015-12-01T18:30:47+0000"",
+""appId"":""CEOCOID1"",
+""messageId"":""7ec34962db32ff5f08ef"",
+            ""messageType"": ""ces"",
+            ""appId"": ""CEOCOID1"",
+            ""companyId"": ""COMPANY_ID"",
+            ""facilityId"": ""FACILITY_ID""
+        },
+        ""irdapiBody"": {
+            ""contextEngineRq"": {
+                ""campaign"": {
+                    ""name"": ""UNIQUE_NAME"",
+                    ""stDate"": ""FROM_PRESENT_DT"",
+                    ""endDate"": ""TOMORROW_DT"",
+                    ""targetGroups"": [
+                        ""test for Req""
+                    ],
+                    ""type"": ""EVENT"",
+                    ""triggerGroups"": [
+                        {
+                            ""name"": ""test for Req Group"",
+                            ""triggers"": [
+                                {
+                                    ""locationEvent"": [
+                                        {
+                                            ""key"": ""context.location.facility.facilityName"",
+                                            ""value"": ""surfershop"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""testAtt"",
+                                            ""value"": ""gender"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.gender"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.gender"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.gender"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.gender"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.gender"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.gender"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.gender"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.occupation"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.occupation"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.occupation"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.education"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.education"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.education"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.education"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""context.consumer.ageRange"",
+                                            ""value"": ""null"",
+                                            ""op"": ""==""
+                                        },
+                                        {
+                                            ""key"": ""DOB"",
+                                            ""value"": ""1011"",
+                                            ""op"": ""==""
+                                        }
+                                    ],
+                                    ""eventName"": ""Location Event""
+                                }
+                            ],
+                            ""action"": {
+                                ""type"": ""E"",
+                                ""priority"": ""1"",
+                                ""contentId"": ""6"",
+                                ""actionName"": ""Greetings 234""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+"
